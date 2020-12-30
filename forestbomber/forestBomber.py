@@ -1,0 +1,36 @@
+
+
+
+
+import sys
+import os
+import pygame
+from pygame.locals import *
+
+
+# Define the colours
+WHITE = (255, 255, 255)
+PURPLE = (96, 85, 154)
+LIGHT_BLUE = (157, 220, 241)
+DARK_BLUE = (63, 111, 182)
+GREEN = (57, 180,22)
+
+# Define constants
+SCREEN_WIDTH = 640
+SCREEN_HEIGHT = 480
+SCOREBOARD_MARGIN = 4
+LINE_HEIGHT = 18
+BOX_WIDTH = 300
+BOX_HEIGHT = 150
+
+TOTAL_LEVELS = 4
+MAX_TREES = 12
+TREE_SPACING = 40
+FIRST_TREE = 140
+GROUND_HEIGHT = 8
+TREE_OFF_GROUND = 4
+
+PLANE_START_X = 0
+PLANE_START_Y = 54
+
+
