@@ -87,3 +87,21 @@ forest_2 = ['-', 'T', '-', '-', 'T', '-', 'T', '-', 'T', 'T', '-', 'T']
 forest_3 = ['T', 'T', '-', '-', 'T', '-', 'T', 'T', 'T', 'T', '-', '-']
 forest_4 = ['T', 'T', '-', '-', 'T', 'T', 'T', '-', 'T', 'T', 'T', '-']
 forest = list(forest_1)
+
+# Main loop
+while True: 
+    
+    for event in pygame.event.get():
+    
+        #User quits 
+        if event.type == QUIT: 
+            pygame.quit()
+            sys.exit()
+            
+        # Draw Background
+        game_screen.blit(background_image, [0, 0]) 
+        
+        pygame.display.update()
+        clock.tick(30) 
+        
+
