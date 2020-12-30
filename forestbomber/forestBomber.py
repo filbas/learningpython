@@ -53,3 +53,37 @@ bomb_image = pygame.image.load('bomb.png').convert_alpha()
 # Load sounds
 explosion_sound = pygame.mixer.Sound('explosion.ogg')
 tree_sound = pygame.mixer.Sound('tree_explosion.ogg')
+
+# Initialise variables
+level = 1
+score = 0
+hi_score = 0
+speed_boost = 0
+
+plane_exploded = False
+level_cleared = False
+plane_front = 0
+plane_explode_sound_played = False
+
+
+bomb_dropped = False
+bomb = bomb_image.get_rect()
+
+plane = plane_image.get_rect()
+plane.x = PLANE_START_X
+plane.y = PLANE_START_Y
+
+tree = tree_image.get_rect()
+tree.y = SCREEN_HEIGHT - tree.height - TREE_OFF_GROUND
+
+burning_tree = 0
+tree_timer = 0
+
+burning_trees = []
+
+# Set up different forests for each level
+forest_1 = ['T', '-', 'T', '-', '-', '-', 'T', '-', '-', '-', '-', 'T']
+forest_2 = ['-', 'T', '-', '-', 'T', '-', 'T', '-', 'T', 'T', '-', 'T']
+forest_3 = ['T', 'T', '-', '-', 'T', '-', 'T', 'T', 'T', 'T', '-', '-']
+forest_4 = ['T', 'T', '-', '-', 'T', 'T', 'T', '-', 'T', 'T', 'T', '-']
+forest = list(forest_1)
