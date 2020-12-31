@@ -101,7 +101,19 @@ while True:
         # Draw Background
         game_screen.blit(background_image, [0, 0]) 
         
+        #draw forest 
+        for column, forest_item in enumerate(forest):
+            tree.x = FIRST_TREE + column * TREE_SPACING 
+            if forest_item == "T": 
+                game_screen.blit(tree_image, [tree.x, tree.y])
+            elif forest_item == "B": 
+                game_screen.blit(burn_tree_image, [tree.x, tree.y])
+        
         pygame.display.update()
         clock.tick(30) 
+        
+        
+        
+        
         
 
